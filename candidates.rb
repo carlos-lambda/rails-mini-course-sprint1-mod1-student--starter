@@ -41,8 +41,21 @@ def average_age(people)
     ages = people.map {|person| person[:age]}
     ave = ages.reduce(0) do |sum, age|
         sum = sum + age
+        sum
     end
-    puts ave / people.length
+    puts ave / people.length.to_f
 end
 
 average_age(arr_candidates)
+
+def language_screening(people, language)
+    result = people.select do |person|
+        cased = person[:languages].map {|p| p.downcase }
+            if cased.include? language.downcase
+                person
+            end
+        end
+    puts result
+end
+
+language_screening(arr_candidates, 'Python')
