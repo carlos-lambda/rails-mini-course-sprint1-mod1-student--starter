@@ -51,9 +51,7 @@ average_age(arr_candidates)
 def language_screening(people, language)
     result = people.select do |person|
         cased = person[:languages].map {|p| p.downcase }
-            if cased.include? language.downcase
-                person
-            end
+            cased.include? language.downcase
         end
     puts result
 end
