@@ -1,3 +1,7 @@
+
+# 1. Create candidates.rb file
+
+# 2. Create 3 different hashes based on the table of data above and assign them to variables jane, sara, and jason (use symbol keys and no hashrockets).
 jane = {
     first_name: 'Jane',
     last_name: 'Doe',
@@ -29,3 +33,16 @@ jason = {
     languages: ['c++', 'Python']
 }
 
+arr_candidates = [ jane, sara, jason]
+
+# arr_candidates.each {|candidate| puts candidate}
+
+def average_age(people)
+    ages = people.map {|person| person[:age]}
+    ave = ages.reduce(0) do |sum, age|
+        sum = sum + age
+    end
+    puts ave / people.length
+end
+
+average_age(arr_candidates)
