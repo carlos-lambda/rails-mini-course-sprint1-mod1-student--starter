@@ -33,7 +33,7 @@ jason = {
     languages: ['c++', 'Python']
 }
 
-arr_candidates = [ jane, sara, jason]
+arr_candidates = [ jane, sara, jason ]
 
 # arr_candidates.each {|candidate| puts candidate}
 
